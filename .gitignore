@@ -1,0 +1,10 @@
+# Node and Python ignores
+frontend/node_modules/
+backend/venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+
+# Build outputs
+frontend/build/
