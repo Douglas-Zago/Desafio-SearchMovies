@@ -7,7 +7,7 @@ import jsPDF from "jspdf";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
-const API_BASE = "http://127.0.0.1:8000/api";
+const API_BASE = "https://desafio-searchmovies-backend-5qwb.onrender.com/api";
 const fallbackPoster = "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg";
 
 const getPosterUrl = (path, size = "w300") => {
