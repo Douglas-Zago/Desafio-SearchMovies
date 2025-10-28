@@ -1,38 +1,258 @@
+/* ======== ESTILOS GERAIS ======== */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  padding-bottom: 24px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Classes de proporção para posters de filmes */
+.ratio-2x3 {
+  --bs-aspect-ratio: 150%; /* 2:3 ratio = 150% */
+}
+
+/* Garante que as imagens preencham o container do poster */
+.object-fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ======== TEMA CLARO ======== */
+body[data-bs-theme="light"] {
+  background: #f6f7f9;
+  color: #111;
+}
+
+body[data-bs-theme="light"] .card-dark {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  color: #222;
+}
+
+body[data-bs-theme="light"] .footer {
+  background: linear-gradient(to bottom, #f9fafb, #dee1e6);
+  color: #222;
+  border-top: 1px solid #ccc;
+}
+
+body[data-bs-theme="light"] .footer strong {
+  color: #000;
+}
+
+body[data-bs-theme="light"] .footer small {
+  color: #555;
+}
+
+/* ======== TEMA ESCURO ======== */
+
+body[data-bs-theme="dark"] {
+  background: #0d1117;
+  color: #eaecef;
+}
+
+body[data-bs-theme="dark"] .card-dark {
+  background-color: #1f242c;
+  border: 1px solid #30363d;
+  color: #f0f6fc;
+}
+
+body[data-bs-theme="dark"] .footer {
+  background: linear-gradient(to bottom, #161b22, #0d1117);
+  color: #c9d1d9;
+  border-top: 1px solid #21262d;
+}
+
+body[data-bs-theme="dark"] .footer strong {
+  color: #fff;
+}
+
+body[data-bs-theme="dark"] .footer small {
+  color: #8b949e;
+}
+
+/* ======== CABEÇALHOS ======== */
+
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+h1.display-6 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* ======== SEÇÕES ======== */
+
+.section {
+  margin-top: 40px;
+}
+
+.section-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 16px;
 }
 
-.App-link {
-  color: #61dafb;
+body[data-bs-theme="light"] .section-header {
+  border-color: #e5e7eb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ======== FORMULÁRIO ======== */
+
+form {
+  margin-bottom: 24px;
+}
+
+form input.form-control {
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+form button.btn {
+  border-radius: 6px;
+}
+
+/* ======== CARDS ======== */
+
+.card-dark {
+  transition: 0.3s ease;
+  border-radius: 10px;
+}
+
+.card-dark:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.4);
+}
+
+.card-dark .card-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.card-dark .text-muted {
+  color: #9ca3af !important;
+}
+
+.card-dark .btn-warning {
+  background-color: #f1c40f;
+  border: none;
+  font-weight: 600;
+}
+
+.card-dark .btn-warning:hover {
+  background-color: #e2b60c;
+}
+
+.card-dark .btn-danger {
+  background-color: #e74c3c;
+  border: none;
+  font-weight: 600;
+}
+
+.card-dark .btn-danger:hover {
+  background-color: #cf3c2f;
+}
+
+/* ======== TOOLTIP E HOVER ======== */
+
+.movie-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.5);
+}
+
+.movie-tooltip {
+  background-color: #161b22 !important;
+  color: #f0f6fc !important;
+  border: 1px solid #30363d !important;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  max-width: 250px;
+}
+
+body[data-bs-theme="light"] .movie-tooltip {
+  background-color: #f0f0f0 !important;
+  color: #111 !important;
+  border: 1px solid #ccc !important;
+}
+
+/* ======== BOTÕES ======== */
+
+button.btn-info,
+button.btn-secondary {
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+
+button.btn-info:hover {
+  background-color: #1995ad;
+}
+
+button.btn-secondary:hover {
+  background-color: #5a5a5a;
+}
+
+/* ======== RODAPÉ ======== */
+
+.footer {
+  margin-top: 60px;
+  padding: 24px 0;
+  text-align: center;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.footer strong {
+  transition: color 0.3s ease;
+}
+
+/* ======== TOAST ======== */
+
+.toast {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  font-weight: 500;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .footer {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  form input.form-control {
+    font-size: 15px;
   }
 }
