@@ -1,6 +1,6 @@
 # 🎬 Filmes Favoritos
 
-![Preview do Projeto](https://via.placeholder.com/1000x500.png?text=Preview+do+Projeto)  
+![Preview do Projeto](https://raw.githubusercontent.com/Douglas-Zago/Desafio-SearchMovies/main/preview.png)
 
 Aplicação web que permite **buscar filmes**, **favoritar** os que você mais gosta e até **gerar um PDF** com sua lista personalizada.  
 Desenvolvida com **Django (backend)** e **React + Bootstrap (frontend)**, a aplicação consome dados da **API do TMDB**.
