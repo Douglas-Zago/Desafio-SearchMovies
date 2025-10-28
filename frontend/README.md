@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# 🎬 Search Movies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação desenvolvida como parte do desafio técnico **Elite Dev**, com o objetivo de criar uma lista de filmes que permite:
+- Pesquisar filmes utilizando a API do **The Movie Database (TMDb)**.
+- Adicionar e remover filmes dos favoritos.
+- Compartilhar a lista de favoritos por link.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Tecnologias Utilizadas
 
-### `npm start`
+### Front-End
+- React.js (Create React App)
+- Axios (requisições HTTP)
+- React Router DOM (rotas)
+- CSS (estilização simples e responsiva)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Back-End
+- Django (API REST)
+- Requests (integração com a API TMDb)
+- SQLite (banco de dados local)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ⚙️ Funcionalidades
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+✅ **Busca de filmes** — consulta à API TMDb e exibe os resultados.  
+✅ **Adicionar aos favoritos** — salva o filme no banco de dados via API Django.  
+✅ **Remover dos favoritos** — permite excluir filmes salvos.  
+✅ **Compartilhar lista** — gera um link com os filmes favoritos.  
+✅ **Página de favoritos compartilhados** — exibe filmes enviados pelo link.  
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧠 Estrutura do Projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Filmes-Favoritos/
+│
+├── backend/
+│ ├── core/
+│ └── favorites/
+│ ├── models.py
+│ ├── views.py
+│ ├── urls.py
+│ └── migrations/
+│
+├── frontend/
+│ ├── src/
+│ │ ├── App.js
+│ │ ├── index.js
+│ │ └── App.css
+│ └── package.json
+│
+└── README.md
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🧩 Como Executar o Projeto
 
-### `npm run eject`
+### 🔹 Back-End (Django)
+1. Acesse a pasta `backend`
+2. Crie e ative o ambiente virtual:
+   
+   python -m venv venv
+   venv\Scripts\activate
+Instale as dependências:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+pip install -r requirements.txt
+Rode o servidor:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+python manage.py runserver
+O back-end estará disponível em:
+👉 http://127.0.0.1:8000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+🔹 Front-End (React)
+Acesse a pasta frontend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Instale as dependências:
 
-## Learn More
+npm install
+Inicie o servidor de desenvolvimento:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm start
+O front-end estará disponível em:
+👉 http://localhost:3000
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🔗 Deploy
+Serviço	Descrição	Status
+Vercel	Front-end React hospedado	🔄 A implementar
+Render/Railway	Back-end Django hospedado	🔄 A implementar
 
-### Code Splitting
+📄 Créditos
+API: The Movie Database (TMDb)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Desenvolvido por Douglas Zago
 
-### Analyzing the Bundle Size
+Desafio técnico: Elite Dev 2025
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+🖼️ Demonstração (adicionar após finalização)
+Tela de busca
 
-### Making a Progressive Web App
+Lista de favoritos
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Página de compartilhamento
