@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-0etlb1uroaf-6&(a&ngeo=p15h(hc=@6ngbz)j91$foed-0ezi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', 'localhost']
+ALLOWED_HOSTS = ['.vercel.app', 'localhost', 'desafio-search-movies.vercel.app', '127.0.0.1']
 
 
 
@@ -135,6 +135,6 @@ TMDB_API_KEY = os.getenv('TMDB_API_KEY')
 # Lista de Sites Permitidos para CORS
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://teu-front.vercel.app",
+    "desafio-search-movies.vercel.app",
 ]
 
