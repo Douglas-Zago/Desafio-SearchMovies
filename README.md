@@ -1,7 +1,6 @@
 # 🎬 Filmes Favoritos
 
 ![Preview do Projeto](https://via.placeholder.com/1000x500.png?text=Preview+do+Projeto)  
-> *(substitua o link acima por uma imagem real do seu site após o deploy — exemplo: uma captura de tela mostrando os filmes e os favoritos)*
 
 Aplicação web que permite **buscar filmes**, **favoritar** os que você mais gosta e até **gerar um PDF** com sua lista personalizada.  
 Desenvolvida com **Django (backend)** e **React + Bootstrap (frontend)**, a aplicação consome dados da **API do TMDB**.
